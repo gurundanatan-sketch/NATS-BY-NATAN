@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "note": "Data contoh bawaan: Al-Fatihah & Al-Ikhlas. Terjemahan Kemenag (edisi penyempurnaan 2019) dan terjemahan Inggris bebas NATS. Impor dataset 114 surah lewat Pengaturan > Impor Data.",
+    "wordFormat": ["arab", "transliterasi", "arti", "akar", "keterangan"]
+  },
+  "translations": [
+    { "id": "KEMENAG", "name": "Terjemahan Kemenag RI", "lang": "id" },
+    { "id": "EN", "name": "English (NATS)", "lang": "en" }
+  ],
+  "tafsirSources": ["Ringkasan NATS"],
+  "surah": {
+    "1": [
+      { "v": 1, "orig": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ", "translit": "Bismillāhir-raḥmānir-raḥīm",
+        "tr": { "KEMENAG": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.", "EN": "In the name of God, the Most Gracious, the Most Merciful." },
+        "words": [["بِسْمِ","bismi","dengan nama","س م و","jar + isim"],["ٱللَّهِ","allāhi","Allah","ا ل ه","lafzul jalalah"],["ٱلرَّحْمَٰنِ","ar-raḥmāni","Yang Maha Pengasih","ر ح م","sifat"],["ٱلرَّحِيمِ","ar-raḥīmi","Yang Maha Penyayang","ر ح م","sifat"]],
+        "tafsir": "Basmalah: memulai segala sesuatu dengan menyebut nama Allah, memohon berkah dan pertolongan-Nya. Ar-Rahman menunjuk kasih yang luas, Ar-Rahim kasih yang terus-menerus." },
+      { "v": 2, "orig": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ", "translit": "Al-ḥamdu lillāhi rabbil-‘ālamīn",
+        "tr": { "KEMENAG": "Segala puji bagi Allah, Tuhan semesta alam.", "EN": "All praise belongs to God, Lord of all the worlds." },
+        "words": [["ٱلْحَمْدُ","al-ḥamdu","segala puji","ح م د","mubtada'"],["لِلَّهِ","lillāhi","bagi Allah","ا ل ه","jar majrur"],["رَبِّ","rabbi","Tuhan/Pemelihara","ر ب ب","na'at"],["ٱلْعَٰلَمِينَ","al-‘ālamīna","semesta alam","ع ل م","mudhaf ilaih (jamak)"]],
+        "tafsir": "Pujian sempurna hanya milik Allah, Pemelihara seluruh makhluk." },
+      { "v": 3, "orig": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ", "translit": "Ar-raḥmānir-raḥīm",
+        "tr": { "KEMENAG": "Yang Maha Pengasih lagi Maha Penyayang,", "EN": "the Most Gracious, the Most Merciful," },
+        "words": [["ٱلرَّحْمَٰنِ","ar-raḥmāni","Yang Maha Pengasih","ر ح م","sifat"],["ٱلرَّحِيمِ","ar-raḥīmi","Yang Maha Penyayang","ر ح م","sifat"]],
+        "tafsir": "Pengulangan sifat rahmat menegaskan bahwa pemeliharaan Allah dilandasi kasih sayang." },
+      { "v": 4, "orig": "مَٰلِكِ يَوْمِ ٱلدِّينِ", "translit": "Māliki yaumid-dīn",
+        "tr": { "KEMENAG": "Pemilik hari Pembalasan.", "EN": "Master of the Day of Judgment." },
+        "words": [["مَٰلِكِ","māliki","Pemilik/Raja","م ل ك","sifat"],["يَوْمِ","yaumi","hari","ي و م","mudhaf ilaih"],["ٱلدِّينِ","ad-dīni","pembalasan","د ي ن","mudhaf ilaih"]],
+        "tafsir": "Allah yang berkuasa penuh pada hari ketika setiap amal diberi balasan." },
+      { "v": 5, "orig": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ", "translit": "Iyyāka na‘budu wa iyyāka nasta‘īn",
+        "tr": { "KEMENAG": "Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami memohon pertolongan.", "EN": "You alone we worship, and You alone we ask for help." },
+        "words": [["إِيَّاكَ","iyyāka","hanya kepada-Mu","—","dhamir munfashil"],["نَعْبُدُ","na‘budu","kami menyembah","ع ب د","fi'il mudhari'"],["وَإِيَّاكَ","wa iyyāka","dan hanya kepada-Mu","—","wawu athaf + dhamir"],["نَسْتَعِينُ","nasta‘īnu","kami memohon pertolongan","ع و ن","fi'il mudhari' (istaf'ala)"]],
+        "tafsir": "Inti tauhid: ibadah dan permohonan pertolongan hanya ditujukan kepada Allah." },
+      { "v": 6, "orig": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ", "translit": "Ihdinaṣ-ṣirāṭal-mustaqīm",
+        "tr": { "KEMENAG": "Bimbinglah kami ke jalan yang lurus,", "EN": "Guide us to the straight path," },
+        "words": [["ٱهْدِنَا","ihdinā","bimbinglah kami","ه د ي","fi'il amr + dhamir"],["ٱلصِّرَٰطَ","aṣ-ṣirāṭa","jalan","ص ر ط","maf'ul bih"],["ٱلْمُسْتَقِيمَ","al-mustaqīma","yang lurus","ق و م","na'at"]],
+        "tafsir": "Doa paling penting seorang hamba: petunjuk menuju dan keteguhan di jalan yang lurus." },
+      { "v": 7, "orig": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ", "translit": "Ṣirāṭal-lażīna an‘amta ‘alaihim, gairil-magḍūbi ‘alaihim wa laḍ-ḍāllīn",
+        "tr": { "KEMENAG": "(yaitu) jalan orang-orang yang telah Engkau beri nikmat, bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) orang-orang yang sesat.", "EN": "the path of those You have blessed, not of those who earned anger, nor of those who went astray." },
+        "words": [["صِرَٰطَ","ṣirāṭa","jalan","ص ر ط","badal"],["ٱلَّذِينَ","al-lażīna","orang-orang yang","—","isim maushul"],["أَنْعَمْتَ","an‘amta","Engkau beri nikmat","ن ع م","fi'il madhi"],["عَلَيْهِمْ","‘alaihim","kepada mereka","—","jar majrur"],["غَيْرِ","gairi","bukan","غ ي ر","na'at/istitsna'"],["ٱلْمَغْضُوبِ","al-magḍūbi","yang dimurkai","غ ض ب","isim maf'ul"],["عَلَيْهِمْ","‘alaihim","atas mereka","—","jar majrur"],["وَلَا","wa lā","dan bukan","—","huruf athaf + nafi"],["ٱلضَّآلِّينَ","aḍ-ḍāllīna","orang-orang sesat","ض ل ل","isim fa'il jamak"]],
+        "tafsir": "Penjelasan jalan lurus: jalan para nabi, orang jujur, syuhada, dan orang saleh." }
+    ],
+    "112": [
+      { "v": 1, "orig": "قُلْ هُوَ ٱللَّهُ أَحَدٌ", "translit": "Qul huwallāhu aḥad",
+        "tr": { "KEMENAG": "Katakanlah (Nabi Muhammad), “Dialah Allah Yang Maha Esa.", "EN": "Say, \"He is God, the One." },
+        "words": [["قُلْ","qul","katakanlah","ق و ل","fi'il amr"],["هُوَ","huwa","Dia","—","dhamir"],["ٱللَّهُ","allāhu","Allah","ا ل ه","khabar"],["أَحَدٌ","aḥadun","Maha Esa","ا ح د","khabar"]],
+        "tafsir": "Penegasan keesaan Allah yang mutlak." },
+      { "v": 2, "orig": "ٱللَّهُ ٱلصَّمَدُ", "translit": "Allāhuṣ-ṣamad",
+        "tr": { "KEMENAG": "Allah tempat meminta segala sesuatu.", "EN": "God, the Eternal Refuge." },
+        "words": [["ٱللَّهُ","allāhu","Allah","ا ل ه","mubtada'"],["ٱلصَّمَدُ","aṣ-ṣamadu","tempat bergantung","ص م د","khabar"]],
+        "tafsir": "Seluruh makhluk bergantung kepada-Nya, sedangkan Dia tidak bergantung kepada siapa pun." },
+      { "v": 3, "orig": "لَمْ يَلِدْ وَلَمْ يُولَدْ", "translit": "Lam yalid wa lam yūlad",
+        "tr": { "KEMENAG": "Dia tidak beranak dan tidak pula diperanakkan,", "EN": "He neither begets nor was begotten," },
+        "words": [["لَمْ","lam","tidak","—","huruf jazm"],["يَلِدْ","yalid","beranak","و ل د","fi'il mudhari' majzum"],["وَلَمْ","wa lam","dan tidak","—","athaf + jazm"],["يُولَدْ","yūlad","diperanakkan","و ل د","fi'il majhul"]],
+        "tafsir": "Allah suci dari sifat makhluk." },
+      { "v": 4, "orig": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ", "translit": "Wa lam yakul lahū kufuwan aḥad",
+        "tr": { "KEMENAG": "serta tidak ada sesuatu pun yang setara dengan-Nya.”", "EN": "and there is none comparable to Him.\"" },
+        "words": [["وَلَمْ","wa lam","dan tidak","—","athaf + jazm"],["يَكُن","yakun","ada","ك و ن","fi'il naqish"],["لَّهُۥ","lahū","bagi-Nya","—","jar majrur"],["كُفُوًا","kufuwan","setara","ك ف ا","khabar"],["أَحَدٌۢ","aḥadun","seorang pun","ا ح د","isim"]],
+        "tafsir": "Tidak ada yang sebanding dengan Allah dalam zat, sifat, dan perbuatan." }
+    ]
+  }
+}

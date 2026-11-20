@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#121a36">
+  <meta name="format-detection" content="telephone=no">
+  <title>NATS BY NATAN</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Frank+Ruhl+Libre:wght@400;600&family=GFS+Didot&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="appbar" id="appbar">
+      <button class="icon-btn" id="btnMenu" aria-label="Menu">☰</button>
+      <div class="appbar-title">
+        <span class="brand-mark">NATS</span>
+        <span class="appbar-sub" id="appbarSub">BY NATAN</span>
+      </div>
+      <button class="icon-btn" id="btnSearch" aria-label="Cari">⌕</button>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <nav class="bottomnav" id="bottomnav">
+      <a href="#/home" data-tab="home"><i>⌂</i><span>Beranda</span></a>
+      <a href="#/bible" data-tab="bible"><i>✝</i><span>Alkitab</span></a>
+      <a href="#/quran" data-tab="quran"><i>☪</i><span>Al-Qur'an</span></a>
+      <a href="#/hadith" data-tab="hadith"><i>❖</i><span>Hadits</span></a>
+      <a href="#/library" data-tab="library"><i>▤</i><span>Pustaka</span></a>
+    </nav>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <img src="assets/icon.svg" alt="" class="drawer-logo">
+      <div><b>NATS BY NATAN</b><small>Studi Kitab Suci & Iman</small></div>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#/home">⌂ Beranda</a>
+      <a href="#/bible">✝ Alkitab Interlinear</a>
+      <a href="#/quran">☪ Al-Qur'an & Tafsir</a>
+      <a href="#/hadith">❖ Ensiklopedia Hadits 9 Imam</a>
+      <a href="#/lexicon">Ａ Leksikon & Kata Asli</a>
+      <a href="#/topics">◎ Studi Tema</a>
+      <a href="#/plans">☑ Rencana Bacaan</a>
+      <a href="#/memorize">♲ Hafalan</a>
+      <a href="#/notes">✎ Catatan & Penanda</a>
+      <a href="#/library">▤ Perpustakaan Digital</a>
+      <a href="#/search">⌕ Pencarian Web & Aplikasi</a>
+      <a href="#/settings">⚙ Pengaturan & Backup</a>
+      <a href="#/about">ⓘ Tentang</a>
+    </nav>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <section class="sheet" id="sheet" aria-hidden="true">
+    <div class="sheet-grip"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+  <input type="file" id="filePicker" hidden>
+
+  <script src="capacitor.js" onerror="this.remove()"></script>
+  <script src="js/canon.js"></script>
+  <script src="js/native.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "appId": "com.natan.nats",
+  "appName": "NATS BY NATAN",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0c1228",
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 800, "backgroundColor": "#0c1228" }
+  }
+}

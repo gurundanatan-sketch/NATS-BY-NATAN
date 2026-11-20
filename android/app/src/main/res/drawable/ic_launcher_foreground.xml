@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ikon NATS: bintang emas di atas kitab terbuka (zona aman ikon adaptif) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="512" android:viewportHeight="512">
+    <group android:translateX="102" android:translateY="96" android:scaleX="0.6" android:scaleY="0.6">
+        <path android:fillColor="#F1D08B" android:pathData="M256,90 L274,132 L319,135 L285,163 L297,207 L256,183 L215,207 L227,163 L193,135 L238,132 Z"/>
+        <path android:strokeColor="#F1D08B" android:strokeWidth="22" android:strokeLineJoin="round" android:fillColor="#00000000"
+            android:pathData="M76,270 C140,234 210,236 250,268 L250,420 C210,390 140,388 76,420 Z"/>
+        <path android:strokeColor="#F1D08B" android:strokeWidth="22" android:strokeLineJoin="round" android:fillColor="#00000000"
+            android:pathData="M436,270 C372,234 302,236 262,268 L262,420 C302,390 372,388 436,420 Z"/>
+        <path android:strokeColor="#D6A84E" android:strokeWidth="10" android:strokeLineCap="round"
+            android:pathData="M110,300 L215,300 M110,340 L215,340 M297,300 L402,300 M297,340 L402,340"/>
+    </group>
+</vector>

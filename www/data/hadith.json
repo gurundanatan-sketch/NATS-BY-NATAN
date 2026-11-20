@@ -1,0 +1,367 @@
+{
+ "meta": {
+  "note": "Data contoh bawaan. Penomoran berbeda antar-edisi (mis. Fuad Abdul Baqi, Lidwa Pusaka); cocokkan dengan dataset lengkap yang diimpor. Terjemahan adalah terjemahan bebas NATS."
+ },
+ "kitab": [
+  {
+   "id": "bukhari",
+   "name": "Shahih Bukhari",
+   "ar": "صحيح البخاري",
+   "imam": "Imam al-Bukhari (w. 256 H)",
+   "total": 7008
+  },
+  {
+   "id": "muslim",
+   "name": "Shahih Muslim",
+   "ar": "صحيح مسلم",
+   "imam": "Imam Muslim (w. 261 H)",
+   "total": 5362
+  },
+  {
+   "id": "abudawud",
+   "name": "Sunan Abu Dawud",
+   "ar": "سنن أبي داود",
+   "imam": "Imam Abu Dawud (w. 275 H)",
+   "total": 4590
+  },
+  {
+   "id": "tirmidzi",
+   "name": "Sunan Tirmidzi",
+   "ar": "سنن الترمذي",
+   "imam": "Imam at-Tirmidzi (w. 279 H)",
+   "total": 3891
+  },
+  {
+   "id": "nasai",
+   "name": "Sunan Nasa'i",
+   "ar": "سنن النسائي",
+   "imam": "Imam an-Nasa'i (w. 303 H)",
+   "total": 5662
+  },
+  {
+   "id": "ibnumajah",
+   "name": "Sunan Ibnu Majah",
+   "ar": "سنن ابن ماجه",
+   "imam": "Imam Ibnu Majah (w. 273 H)",
+   "total": 4332
+  },
+  {
+   "id": "ahmad",
+   "name": "Musnad Ahmad",
+   "ar": "مسند أحمد",
+   "imam": "Imam Ahmad bin Hanbal (w. 241 H)",
+   "total": 26363
+  },
+  {
+   "id": "malik",
+   "name": "Muwatha' Malik",
+   "ar": "موطأ مالك",
+   "imam": "Imam Malik bin Anas (w. 179 H)",
+   "total": 1594
+  },
+  {
+   "id": "darimi",
+   "name": "Sunan Darimi",
+   "ar": "سنن الدارمي",
+   "imam": "Imam ad-Darimi (w. 255 H)",
+   "total": 3367
+  }
+ ],
+ "themes": [
+  "Niat & Ikhlas",
+  "Iman",
+  "Akhlak",
+  "Ilmu",
+  "Persaudaraan",
+  "Nasihat",
+  "Sunnah",
+  "Takwa",
+  "Lisan"
+ ],
+ "items": {
+  "bukhari": [
+   {
+    "no": 1,
+    "bab": "Permulaan Wahyu — Bagaimana permulaan turunnya wahyu",
+    "perawi": "Umar bin al-Khaththab",
+    "arab": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى دُنْيَا يُصِيبُهَا أَوْ إِلَى امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ",
+    "translit": "Innamal-a‘mālu bin-niyyāt, wa innamā likullimri’in mā nawā …",
+    "terjemah": "Sesungguhnya setiap amal bergantung pada niatnya, dan setiap orang hanya memperoleh apa yang ia niatkan. Siapa yang hijrahnya untuk dunia yang ingin diraihnya atau perempuan yang ingin dinikahinya, maka hijrahnya bernilai sesuai tujuan hijrahnya itu.",
+    "derajat": "Shahih",
+    "tema": [
+     "Niat & Ikhlas"
+    ],
+    "takhrij": [
+     [
+      "muslim",
+      1907
+     ],
+     [
+      "abudawud",
+      2201
+     ],
+     [
+      "tirmidzi",
+      1647
+     ],
+     [
+      "nasai",
+      75
+     ],
+     [
+      "ibnumajah",
+      4227
+     ]
+    ],
+    "syarah": "Hadits pokok agama: nilai amal ditentukan niat. Para ulama menempatkannya di awal kitab untuk mengingatkan pentingnya meluruskan niat dalam menuntut ilmu.",
+    "faidah": [
+     "Niat adalah syarat diterimanya amal",
+     "Amal yang sama bisa berbeda nilainya karena niat",
+     "Anjuran ikhlas dalam setiap ibadah"
+    ]
+   },
+   {
+    "no": 13,
+    "bab": "Iman — Termasuk iman: mencintai saudaranya seperti mencintai dirinya",
+    "perawi": "Anas bin Malik",
+    "arab": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+    "translit": "Lā yu’minu aḥadukum ḥattā yuḥibba li’akhīhi mā yuḥibbu linafsih",
+    "terjemah": "Tidak sempurna iman seseorang di antara kalian sampai ia mencintai bagi saudaranya apa yang ia cintai bagi dirinya sendiri.",
+    "derajat": "Shahih",
+    "tema": [
+     "Iman",
+     "Persaudaraan",
+     "Akhlak"
+    ],
+    "takhrij": [
+     [
+      "muslim",
+      45
+     ],
+     [
+      "tirmidzi",
+      2515
+     ],
+     [
+      "nasai",
+      5016
+     ],
+     [
+      "ibnumajah",
+      66
+     ]
+    ],
+    "syarah": "Kesempurnaan iman tampak pada kepedulian sosial: menginginkan kebaikan bagi orang lain sebagaimana bagi diri sendiri.",
+    "faidah": [
+     "Iman bertingkat-tingkat",
+     "Larangan dengki",
+     "Dorongan mempererat persaudaraan"
+    ]
+   }
+  ],
+  "muslim": [
+   {
+    "no": 55,
+    "bab": "Iman — Penjelasan bahwa agama adalah nasihat",
+    "perawi": "Tamim ad-Dari",
+    "arab": "الدِّينُ النَّصِيحَةُ. قُلْنَا: لِمَنْ؟ قَالَ: لِلَّهِ وَلِكِتَابِهِ وَلِرَسُولِهِ وَلِأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ",
+    "translit": "Ad-dīnun-naṣīḥah …",
+    "terjemah": "“Agama itu adalah nasihat.” Kami bertanya, “Untuk siapa?” Beliau menjawab, “Untuk Allah, kitab-Nya, rasul-Nya, para pemimpin kaum muslimin, dan kaum muslimin pada umumnya.”",
+    "derajat": "Shahih",
+    "tema": [
+     "Nasihat",
+     "Akhlak"
+    ],
+    "takhrij": [
+     [
+      "abudawud",
+      4944
+     ],
+     [
+      "nasai",
+      4197
+     ]
+    ],
+    "syarah": "Nasihat bermakna menghendaki kebaikan dan ketulusan dalam setiap hubungan: kepada Allah, wahyu, rasul, pemimpin, dan sesama.",
+    "faidah": [
+     "Ketulusan adalah inti beragama",
+     "Nasihat kepada pemimpin dengan cara yang baik"
+    ]
+   },
+   {
+    "no": 2699,
+    "bab": "Dzikir, Doa, Taubat — Keutamaan berkumpul membaca Al-Qur'an dan dzikir",
+    "perawi": "Abu Hurairah",
+    "arab": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
+    "translit": "Man salaka ṭarīqan yaltamisu fīhi ‘ilman sahhalallāhu lahū bihī ṭarīqan ilal-jannah",
+    "terjemah": "Siapa yang menempuh suatu jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga.",
+    "derajat": "Shahih",
+    "tema": [
+     "Ilmu"
+    ],
+    "takhrij": [
+     [
+      "tirmidzi",
+      2646
+     ],
+     [
+      "abudawud",
+      3643
+     ],
+     [
+      "ibnumajah",
+      225
+     ]
+    ],
+    "syarah": "Potongan dari hadits panjang tentang keutamaan menolong sesama dan menuntut ilmu.",
+    "faidah": [
+     "Keutamaan menuntut ilmu",
+     "Usaha belajar termasuk ibadah"
+    ]
+   }
+  ],
+  "abudawud": [
+   {
+    "no": 4607,
+    "bab": "Sunnah — Berpegang teguh pada sunnah",
+    "perawi": "al-'Irbadh bin Sariyah",
+    "arab": "فَعَلَيْكُمْ بِسُنَّتِي وَسُنَّةِ الْخُلَفَاءِ الْمَهْدِيِّينَ الرَّاشِدِينَ، تَمَسَّكُوا بِهَا وَعَضُّوا عَلَيْهَا بِالنَّوَاجِذِ",
+    "translit": "Fa‘alaikum bisunnatī wa sunnatil-khulafā’il-mahdiyyīnar-rāsyidīn …",
+    "terjemah": "Maka hendaklah kalian berpegang pada sunnahku dan sunnah para khalifah yang lurus lagi mendapat petunjuk; peganglah ia dan gigitlah dengan gigi geraham.",
+    "derajat": "Shahih",
+    "tema": [
+     "Sunnah"
+    ],
+    "takhrij": [
+     [
+      "tirmidzi",
+      2676
+     ],
+     [
+      "ibnumajah",
+      42
+     ]
+    ],
+    "syarah": "Wasiat Nabi menjelang akhir hayatnya agar umat berpegang teguh pada tuntunan beliau dan para khalifah yang lurus.",
+    "faidah": [
+     "Kewajiban mengikuti sunnah",
+     "Peringatan dari perkara baru dalam agama"
+    ]
+   }
+  ],
+  "tirmidzi": [
+   {
+    "no": 1987,
+    "bab": "Berbakti & Silaturahmi — Pergaulan dengan manusia",
+    "perawi": "Abu Dzar al-Ghifari",
+    "arab": "اتَّقِ اللَّهِ حَيْثُمَا كُنْتَ، وَأَتْبِعِ السَّيِّئَةَ الْحَسَنَةَ تَمْحُهَا، وَخَالِقِ النَّاسَ بِخُلُقٍ حَسَنٍ",
+    "translit": "Ittaqillāha ḥaiṡumā kunta, wa atbi‘is-sayyi’atal-ḥasanata tamḥuhā, wa khāliqin-nāsa bikhuluqin ḥasan",
+    "terjemah": "Bertakwalah kepada Allah di mana pun engkau berada, iringilah keburukan dengan kebaikan niscaya kebaikan itu menghapusnya, dan pergaulilah manusia dengan akhlak yang baik.",
+    "derajat": "Hasan Shahih",
+    "tema": [
+     "Takwa",
+     "Akhlak"
+    ],
+    "takhrij": [],
+    "syarah": "Tiga wasiat yang merangkum hubungan dengan Allah (takwa), dengan diri (taubat dan amal baik), dan dengan manusia (akhlak).",
+    "faidah": [
+     "Takwa tidak terbatas tempat",
+     "Amal baik menghapus kesalahan kecil",
+     "Akhlak mulia bagian dari agama"
+    ]
+   },
+   {
+    "no": 2317,
+    "bab": "Zuhud — Meninggalkan yang tidak bermanfaat",
+    "perawi": "Abu Hurairah",
+    "arab": "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ",
+    "translit": "Min ḥusni islāmil-mar’i tarkuhū mā lā ya‘nīh",
+    "terjemah": "Di antara tanda baiknya keislaman seseorang adalah meninggalkan hal yang tidak bermanfaat baginya.",
+    "derajat": "Hasan",
+    "tema": [
+     "Akhlak",
+     "Lisan"
+    ],
+    "takhrij": [
+     [
+      "ibnumajah",
+      3976
+     ]
+    ],
+    "syarah": "Menjaga waktu, lisan, dan perhatian dari hal sia-sia adalah buah keislaman yang baik.",
+    "faidah": [
+     "Menjaga waktu",
+     "Menjaga lisan"
+    ]
+   }
+  ],
+  "nasai": [
+   {
+    "no": 75,
+    "bab": "Thaharah — Niat dalam wudhu",
+    "perawi": "Umar bin al-Khaththab",
+    "arab": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّةِ، وَإِنَّمَا لِامْرِئٍ مَا نَوَى",
+    "translit": "Innamal-a‘mālu bin-niyyah, wa innamā limri’in mā nawā",
+    "terjemah": "Sesungguhnya amal itu bergantung pada niat, dan bagi setiap orang apa yang ia niatkan.",
+    "derajat": "Shahih",
+    "tema": [
+     "Niat & Ikhlas"
+    ],
+    "takhrij": [
+     [
+      "bukhari",
+      1
+     ],
+     [
+      "muslim",
+      1907
+     ]
+    ],
+    "syarah": "An-Nasa'i meletakkan hadits niat pada bab wudhu sebagai dalil wajibnya niat dalam bersuci.",
+    "faidah": [
+     "Niat dalam ibadah"
+    ]
+   }
+  ],
+  "ibnumajah": [
+   {
+    "no": 224,
+    "bab": "Muqaddimah — Keutamaan ulama dan dorongan menuntut ilmu",
+    "perawi": "Anas bin Malik",
+    "arab": "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+    "translit": "Ṭalabul-‘ilmi farīḍatun ‘alā kulli muslim",
+    "terjemah": "Menuntut ilmu adalah kewajiban atas setiap muslim.",
+    "derajat": "Diperselisihkan (sebagian ulama menilainya shahih karena banyak jalur)",
+    "tema": [
+     "Ilmu"
+    ],
+    "takhrij": [],
+    "syarah": "Ilmu yang wajib bagi setiap orang adalah ilmu yang dibutuhkan untuk menjalankan kewajiban agamanya.",
+    "faidah": [
+     "Ilmu fardhu 'ain dan fardhu kifayah"
+    ]
+   }
+  ],
+  "ahmad": [
+   {
+    "no": 8952,
+    "bab": "Musnad Abu Hurairah",
+    "perawi": "Abu Hurairah",
+    "arab": "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ صَالِحَ الْأَخْلَاقِ",
+    "translit": "Innamā bu‘iṡtu li’utammima ṣāliḥal-akhlāq",
+    "terjemah": "Sesungguhnya aku diutus untuk menyempurnakan akhlak yang baik.",
+    "derajat": "Shahih",
+    "tema": [
+     "Akhlak"
+    ],
+    "takhrij": [],
+    "syarah": "Akhlak mulia adalah salah satu tujuan utama risalah.",
+    "faidah": [
+     "Kedudukan akhlak dalam Islam"
+    ]
+   }
+  ],
+  "malik": [],
+  "darimi": []
+ }
+}

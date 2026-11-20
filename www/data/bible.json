@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "note": "Data contoh bawaan. Teks Ibrani berdasar Westminster Leningrad Codex (domain publik), Yunani berdasar teks kritis umum. Terjemahan NATS adalah terjemahan bebas aplikasi. KJV & WEB domain publik. Impor dataset lengkap lewat Pengaturan > Impor Data.",
+    "wordFormat": ["asli", "transliterasi", "glosa", "strong", "morfologi"]
+  },
+  "translations": [
+    { "id": "NATS", "name": "Terjemahan NATS (Indonesia)", "lang": "id" },
+    { "id": "KJV", "name": "King James Version", "lang": "en" },
+    { "id": "WEB", "name": "World English Bible", "lang": "en" }
+  ],
+  "verses": {
+    "GEN.1": [
+      {
+        "v": 1,
+        "orig": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ׃",
+        "translit": "bərēʾšîṯ bārāʾ ʾĕlōhîm ʾēṯ haššāmayim wəʾēṯ hāʾāreṣ",
+        "tr": {
+          "NATS": "Pada mulanya Allah menciptakan langit dan bumi.",
+          "KJV": "In the beginning God created the heaven and the earth.",
+          "WEB": "In the beginning, God created the heavens and the earth."
+        },
+        "words": [
+          ["בְּרֵאשִׁית", "bərēʾšîṯ", "pada mulanya", "H7225", "Prep + Nomina fem. tunggal"],
+          ["בָּרָא", "bārāʾ", "menciptakan", "H1254", "Verba Qal Perfek 3 mask. tunggal"],
+          ["אֱלֹהִים", "ʾĕlōhîm", "Allah", "H430", "Nomina mask. jamak"],
+          ["אֵת", "ʾēṯ", "(penanda objek)", "H853", "Partikel objek langsung"],
+          ["הַשָּׁמַיִם", "haššāmayim", "langit", "H8064", "Artikel + Nomina mask. jamak"],
+          ["וְאֵת", "wəʾēṯ", "dan (objek)", "H853", "Konj + Partikel objek"],
+          ["הָאָרֶץ", "hāʾāreṣ", "bumi", "H776", "Artikel + Nomina fem. tunggal"]
+        ],
+        "xref": ["JHN.1.1", "PSA.33.6", "HEB.11.3"],
+        "note": "Kata בָּרָא (bara) dalam PL hanya dipakai dengan Allah sebagai subjek: penciptaan yang khas karya ilahi."
+      },
+      {
+        "v": 2,
+        "orig": "וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם׃",
+        "translit": "wəhāʾāreṣ hāyəṯāh ṯōhû wāḇōhû wəḥōšeḵ ʿal-pənê ṯəhôm wərûaḥ ʾĕlōhîm məraḥep̄eṯ ʿal-pənê hammāyim",
+        "tr": {
+          "NATS": "Bumi itu belum berbentuk dan kosong; gelap menutupi permukaan samudra raya, dan Roh Allah melayang-layang di atas permukaan air.",
+          "KJV": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+          "WEB": "The earth was formless and empty. Darkness was on the surface of the deep and God's Spirit was hovering over the surface of the waters."
+        },
+        "words": [
+          ["וְהָאָרֶץ", "wəhāʾāreṣ", "dan bumi", "H776", "Konj + Artikel + Nomina fem."],
+          ["הָיְתָה", "hāyəṯāh", "adalah/menjadi", "H1961", "Verba Qal Perfek 3 fem. tunggal"],
+          ["תֹהוּ", "ṯōhû", "tak berbentuk", "H8414", "Nomina mask. tunggal"],
+          ["וָבֹהוּ", "wāḇōhû", "dan kosong", "H922", "Konj + Nomina mask."],
+          ["וְחֹשֶׁךְ", "wəḥōšeḵ", "dan gelap", "H2822", "Konj + Nomina mask."],
+          ["עַל־פְּנֵי", "ʿal-pənê", "di atas permukaan", "H5921", "Prep + Nomina konstruk"],
+          ["תְהוֹם", "ṯəhôm", "samudra raya", "H8415", "Nomina fem. tunggal"],
+          ["וְרוּחַ", "wərûaḥ", "dan Roh", "H7307", "Konj + Nomina konstruk"],
+          ["אֱלֹהִים", "ʾĕlōhîm", "Allah", "H430", "Nomina mask. jamak"],
+          ["מְרַחֶפֶת", "məraḥep̄eṯ", "melayang-layang", "H7363", "Verba Piel Partisip fem."],
+          ["עַל־פְּנֵי", "ʿal-pənê", "di atas permukaan", "H5921", "Prep + Nomina konstruk"],
+          ["הַמָּיִם", "hammāyim", "air", "H4325", "Artikel + Nomina mask. jamak"]
+        ],
+        "xref": ["PSA.104.30", "JER.4.23"],
+        "note": "Frasa תֹהוּ וָבֹהוּ (tohu wabohu) menggambarkan keadaan belum tertata yang kemudian ditata Allah pada hari-hari penciptaan."
+      },
+      {
+        "v": 3,
+        "orig": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר׃",
+        "translit": "wayyōʾmer ʾĕlōhîm yəhî ʾôr wayəhî-ʾôr",
+        "tr": {
+          "NATS": "Lalu Allah berfirman, “Jadilah terang!” Maka terang pun jadi.",
+          "KJV": "And God said, Let there be light: and there was light.",
+          "WEB": "God said, \"Let there be light,\" and there was light."
+        },
+        "words": [
+          ["וַיֹּאמֶר", "wayyōʾmer", "lalu berfirman", "H559", "Konj + Verba Qal Imperfek 3 mask."],
+          ["אֱלֹהִים", "ʾĕlōhîm", "Allah", "H430", "Nomina mask. jamak"],
+          ["יְהִי", "yəhî", "jadilah", "H1961", "Verba Qal Jusif 3 mask."],
+          ["אוֹר", "ʾôr", "terang", "H216", "Nomina mask. tunggal"],
+          ["וַיְהִי־", "wayəhî", "maka jadilah", "H1961", "Konj + Verba Qal Imperfek"],
+          ["אוֹר", "ʾôr", "terang", "H216", "Nomina mask. tunggal"]
+        ],
+        "xref": ["2CO.4.6", "JHN.1.5"],
+        "note": "Pola “Allah berfirman … maka jadilah” menegaskan kuasa firman Allah yang mencipta."
+      }
+    ],
+    "PSA.23": [
+      {
+        "v": 1,
+        "orig": "מִזְמוֹר לְדָוִד יְהוָה רֹעִי לֹא אֶחְסָר׃",
+        "translit": "mizmôr ləḏāwiḏ YHWH rōʿî lōʾ ʾeḥsār",
+        "tr": {
+          "NATS": "Mazmur Daud. TUHAN adalah gembalaku, aku tidak akan kekurangan.",
+          "KJV": "The LORD is my shepherd; I shall not want.",
+          "WEB": "Yahweh is my shepherd: I shall lack nothing."
+        },
+        "words": [
+          ["מִזְמוֹר", "mizmôr", "mazmur", "H4210", "Nomina mask. tunggal"],
+          ["לְדָוִד", "ləḏāwiḏ", "bagi/dari Daud", "H1732", "Prep + Nama diri"],
+          ["יְהוָה", "YHWH", "TUHAN", "H3068", "Nama diri ilahi"],
+          ["רֹעִי", "rōʿî", "gembalaku", "H7462", "Verba Qal Partisip + sufiks 1 tunggal"],
+          ["לֹא", "lōʾ", "tidak", "H3808", "Partikel negasi"],
+          ["אֶחְסָר", "ʾeḥsār", "aku kekurangan", "H2637", "Verba Qal Imperfek 1 tunggal"]
+        ],
+        "xref": ["JHN.10.11", "ISA.40.11"],
+        "note": "Gambaran gembala menekankan pemeliharaan, tuntunan, dan perlindungan."
+      }
+    ],
+    "MAT.5": [
+      {
+        "v": 3,
+        "orig": "Μακάριοι οἱ πτωχοὶ τῷ πνεύματι, ὅτι αὐτῶν ἐστιν ἡ βασιλεία τῶν οὐρανῶν.",
+        "translit": "Makarioi hoi ptōchoi tō pneumati, hoti autōn estin hē basileia tōn ouranōn.",
+        "tr": {
+          "NATS": "Berbahagialah orang yang miskin dalam roh (merasa butuh Allah), karena merekalah pemilik Kerajaan Surga.",
+          "KJV": "Blessed are the poor in spirit: for theirs is the kingdom of heaven.",
+          "WEB": "Blessed are the poor in spirit, for theirs is the Kingdom of Heaven."
+        },
+        "words": [
+          ["Μακάριοι", "Makarioi", "berbahagialah", "G3107", "Adj Nom Mask Jamak"],
+          ["οἱ", "hoi", "(para)", "G3588", "Artikel Nom Mask Jamak"],
+          ["πτωχοὶ", "ptōchoi", "miskin", "G4434", "Adj Nom Mask Jamak"],
+          ["τῷ", "tō", "dalam", "G3588", "Artikel Dat Netral Tunggal"],
+          ["πνεύματι", "pneumati", "roh", "G4151", "Nomina Dat Netral Tunggal"],
+          ["ὅτι", "hoti", "karena", "G3754", "Konjungsi"],
+          ["αὐτῶν", "autōn", "milik mereka", "G846", "Pronomina Gen Jamak"],
+          ["ἐστιν", "estin", "adalah", "G1510", "Verba Pres Ind Akt 3 Tunggal"],
+          ["ἡ", "hē", "(sang)", "G3588", "Artikel Nom Fem Tunggal"],
+          ["βασιλεία", "basileia", "kerajaan", "G932", "Nomina Nom Fem Tunggal"],
+          ["τῶν", "tōn", "(para)", "G3588", "Artikel Gen Mask Jamak"],
+          ["οὐρανῶν", "ouranōn", "surga", "G3772", "Nomina Gen Mask Jamak"]
+        ],
+        "xref": ["LUK.6.20", "ISA.57.15"],
+        "note": "Ucapan bahagia pertama dalam Khotbah di Bukit."
+      }
+    ],
+    "JHN.1": [
+      {
+        "v": 1,
+        "orig": "Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος.",
+        "translit": "En archē ēn ho logos, kai ho logos ēn pros ton theon, kai theos ēn ho logos.",
+        "tr": {
+          "NATS": "Pada mulanya adalah Firman; Firman itu bersama-sama dengan Allah, dan Firman itu adalah Allah.",
+          "KJV": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "WEB": "In the beginning was the Word, and the Word was with God, and the Word was God."
+        },
+        "words": [
+          ["Ἐν", "En", "pada", "G1722", "Preposisi"],
+          ["ἀρχῇ", "archē", "mulanya", "G746", "Nomina Dat Fem Tunggal"],
+          ["ἦν", "ēn", "adalah", "G1510", "Verba Imperf Ind Akt 3 Tunggal"],
+          ["ὁ", "ho", "(sang)", "G3588", "Artikel Nom Mask Tunggal"],
+          ["λόγος", "logos", "Firman", "G3056", "Nomina Nom Mask Tunggal"],
+          ["καὶ", "kai", "dan", "G2532", "Konjungsi"],
+          ["ὁ", "ho", "(sang)", "G3588", "Artikel Nom Mask Tunggal"],
+          ["λόγος", "logos", "Firman", "G3056", "Nomina Nom Mask Tunggal"],
+          ["ἦν", "ēn", "ada", "G1510", "Verba Imperf Ind Akt 3 Tunggal"],
+          ["πρὸς", "pros", "bersama", "G4314", "Preposisi"],
+          ["τὸν", "ton", "(sang)", "G3588", "Artikel Ak Mask Tunggal"],
+          ["θεόν", "theon", "Allah", "G2316", "Nomina Ak Mask Tunggal"],
+          ["καὶ", "kai", "dan", "G2532", "Konjungsi"],
+          ["θεὸς", "theos", "Allah", "G2316", "Nomina Nom Mask Tunggal"],
+          ["ἦν", "ēn", "adalah", "G1510", "Verba Imperf Ind Akt 3 Tunggal"],
+          ["ὁ", "ho", "(sang)", "G3588", "Artikel Nom Mask Tunggal"],
+          ["λόγος", "logos", "Firman", "G3056", "Nomina Nom Mask Tunggal"]
+        ],
+        "xref": ["GEN.1.1", "1JN.1.1", "REV.19.13"],
+        "note": "Pembukaan Injil Yohanes sengaja menggemakan Kejadian 1:1 (“Pada mulanya”)."
+      },
+      {
+        "v": 2,
+        "orig": "οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν.",
+        "translit": "houtos ēn en archē pros ton theon.",
+        "tr": {
+          "NATS": "Ia pada mulanya bersama-sama dengan Allah.",
+          "KJV": "The same was in the beginning with God.",
+          "WEB": "The same was in the beginning with God."
+        },
+        "words": [
+          ["οὗτος", "houtos", "Ia (yang ini)", "G3778", "Pronomina Demonstratif Nom Mask"],
+          ["ἦν", "ēn", "ada", "G1510", "Verba Imperf Ind Akt 3 Tunggal"],
+          ["ἐν", "en", "pada", "G1722", "Preposisi"],
+          ["ἀρχῇ", "archē", "mulanya", "G746", "Nomina Dat Fem Tunggal"],
+          ["πρὸς", "pros", "bersama", "G4314", "Preposisi"],
+          ["τὸν", "ton", "(sang)", "G3588", "Artikel Ak Mask Tunggal"],
+          ["θεόν", "theon", "Allah", "G2316", "Nomina Ak Mask Tunggal"]
+        ],
+        "xref": ["JHN.17.5"],
+        "note": ""
+      },
+      {
+        "v": 3,
+        "orig": "πάντα δι᾽ αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν ὃ γέγονεν.",
+        "translit": "panta di’ autou egeneto, kai chōris autou egeneto oude hen ho gegonen.",
+        "tr": {
+          "NATS": "Segala sesuatu dijadikan melalui Dia, dan tanpa Dia tidak ada satu pun yang jadi dari segala yang telah dijadikan.",
+          "KJV": "All things were made by him; and without him was not any thing made that was made.",
+          "WEB": "All things were made through him. Without him, nothing was made that has been made."
+        },
+        "words": [
+          ["πάντα", "panta", "segala sesuatu", "G3956", "Adj Nom Netral Jamak"],
+          ["δι᾽", "di’", "melalui", "G1223", "Preposisi"],
+          ["αὐτοῦ", "autou", "Dia", "G846", "Pronomina Gen Mask Tunggal"],
+          ["ἐγένετο", "egeneto", "dijadikan", "G1096", "Verba Aor Ind Med 3 Tunggal"],
+          ["καὶ", "kai", "dan", "G2532", "Konjungsi"],
+          ["χωρὶς", "chōris", "tanpa", "G5565", "Preposisi"],
+          ["αὐτοῦ", "autou", "Dia", "G846", "Pronomina Gen Mask Tunggal"],
+          ["ἐγένετο", "egeneto", "jadi", "G1096", "Verba Aor Ind Med 3 Tunggal"],
+          ["οὐδὲ", "oude", "tidak", "G3761", "Partikel negasi"],
+          ["ἕν", "hen", "satu pun", "G1520", "Adj Nom Netral Tunggal"],
+          ["ὃ", "ho", "yang", "G3739", "Pronomina Relatif"],
+          ["γέγονεν", "gegonen", "telah dijadikan", "G1096", "Verba Perf Ind Akt 3 Tunggal"]
+        ],
+        "xref": ["COL.1.16", "HEB.1.2"],
+        "note": ""
+      }
+    ],
+    "JHN.3": [
+      {
+        "v": 16,
+        "orig": "Οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν, ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται ἀλλ᾽ ἔχῃ ζωὴν αἰώνιον.",
+        "translit": "Houtōs gar ēgapēsen ho theos ton kosmon, hōste ton huion ton monogenē edōken, hina pas ho pisteuōn eis auton mē apolētai all’ echē zōēn aiōnion.",
+        "tr": {
+          "NATS": "Karena Allah sangat mengasihi dunia ini, Ia memberikan Anak-Nya yang tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, tetapi memperoleh hidup kekal.",
+          "KJV": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "WEB": "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life."
+        },
+        "words": [
+          ["Οὕτως", "Houtōs", "begitu", "G3779", "Adverbia"],
+          ["γὰρ", "gar", "sebab", "G1063", "Konjungsi"],
+          ["ἠγάπησεν", "ēgapēsen", "mengasihi", "G25", "Verba Aor Ind Akt 3 Tunggal"],
+          ["ὁ", "ho", "(sang)", "G3588", "Artikel Nom Mask"],
+          ["θεὸς", "theos", "Allah", "G2316", "Nomina Nom Mask Tunggal"],
+          ["τὸν", "ton", "(sang)", "G3588", "Artikel Ak Mask"],
+          ["κόσμον", "kosmon", "dunia", "G2889", "Nomina Ak Mask Tunggal"],
+          ["ὥστε", "hōste", "sehingga", "G5620", "Konjungsi"],
+          ["τὸν", "ton", "(sang)", "G3588", "Artikel Ak Mask"],
+          ["υἱὸν", "huion", "Anak", "G5207", "Nomina Ak Mask Tunggal"],
+          ["τὸν", "ton", "yang", "G3588", "Artikel Ak Mask"],
+          ["μονογενῆ", "monogenē", "tunggal", "G3439", "Adj Ak Mask Tunggal"],
+          ["ἔδωκεν", "edōken", "Ia memberikan", "G1325", "Verba Aor Ind Akt 3 Tunggal"],
+          ["ἵνα", "hina", "supaya", "G2443", "Konjungsi"],
+          ["πᾶς", "pas", "setiap", "G3956", "Adj Nom Mask Tunggal"],
+          ["ὁ", "ho", "orang yang", "G3588", "Artikel Nom Mask"],
+          ["πιστεύων", "pisteuōn", "percaya", "G4100", "Verba Pres Partisip Akt"],
+          ["εἰς", "eis", "kepada", "G1519", "Preposisi"],
+          ["αὐτὸν", "auton", "Dia", "G846", "Pronomina Ak Mask"],
+          ["μὴ", "mē", "tidak", "G3361", "Partikel negasi"],
+          ["ἀπόληται", "apolētai", "binasa", "G622", "Verba Aor Subj Med 3 Tunggal"],
+          ["ἀλλ᾽", "all’", "tetapi", "G235", "Konjungsi"],
+          ["ἔχῃ", "echē", "memperoleh", "G2192", "Verba Pres Subj Akt 3 Tunggal"],
+          ["ζωὴν", "zōēn", "hidup", "G2222", "Nomina Ak Fem Tunggal"],
+          ["αἰώνιον", "aiōnion", "kekal", "G166", "Adj Ak Fem Tunggal"]
+        ],
+        "xref": ["ROM.5.8", "1JN.4.9"],
+        "note": "Kata ἀγαπάω (agapaō) menunjuk kasih yang memberi diri."
+      }
+    ]
+  }
+}

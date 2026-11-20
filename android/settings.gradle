@@ -1,0 +1,10 @@
+// NATS BY NATAN — settings.gradle
+// Modul aplikasi + modul plugin Cordova/Capacitor yang dihasilkan otomatis oleh `npx cap sync android`.
+rootProject.name = 'NATS BY NATAN'
+
+include ':app'
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
+
+// Berisi include ':capacitor-android' dan plugin Capacitor (App, Browser, Share, Filesystem, dll.)
+apply from: 'capacitor.settings.gradle'

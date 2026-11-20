@@ -1,0 +1,163 @@
+# =====================================================================
+#  NATS BY NATAN — Build APK & AAB Android otomatis (Capacitor 7)
+#  Lokasi: .github/workflows/android-build.yml
+#
+#  Pemicu : push ke main/master, pull request, tag v*, atau manual (Run workflow)
+#  Hasil  : • NATS-BY-NATAN-debug.apk     (langsung pasang di HP)
+#           • NATS-BY-NATAN-release.apk   (ditandatangani)
+#           • NATS-BY-NATAN-release.aab   (untuk Google Play)
+#           • NATS-BY-NATAN-master-backup.zip (seluruh kode sumber)
+#  Tag v* : otomatis membuat GitHub Release berisi file di atas.
+#
+#  Secrets opsional (Settings ▸ Secrets and variables ▸ Actions):
+#    NATS_KEYSTORE_BASE64   keystore .jks dalam base64  (base64 -w0 nats.jks)
+#    NATS_KEYSTORE_PASSWORD kata sandi keystore
+#    NATS_KEY_ALIAS         alias kunci
+#    NATS_KEY_PASSWORD      kata sandi kunci
+#  Tanpa secrets, workflow membuat keystore sementara (APK tetap bisa dipasang,
+#  tetapi tidak bisa meng-update versi yang ditandatangani kunci lain).
+# =====================================================================
+name: Android Build — NATS BY NATAN
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Jenis build'
+        required: true
+        default: 'all'
+        type: choice
+        options: [all, debug, release]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '20'
+  JAVA_VERSION: '21'
+  APP_NAME: NATS-BY-NATAN
+
+jobs:
+  build:
+    name: Build APK & AAB
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 📥 Checkout kode
+        uses: actions/checkout@v4
+
+      - name: 🟢 Siapkan Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: ☕ Siapkan JDK ${{ env.JAVA_VERSION }} (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: 🤖 Siapkan Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: 🐘 Siapkan Gradle (cache)
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 📦 Pasang dependensi npm (Capacitor + pdf.js)
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          npm run vendor
+
+      - name: ✅ Periksa sintaks & validasi data
+        run: npm run check
+
+      - name: 🧩 Lengkapi modul yang dihasilkan Capacitor
+        run: |
+          # Folder capacitor-cordova-android-plugins dibuat dari template resmi Capacitor
+          # yang sesuai versi terpasang, lalu disatukan dengan proyek android/ milik NATS.
+          if [ ! -f android/capacitor-cordova-android-plugins/build.gradle ]; then
+            mv android android-src
+            npx cap add android
+            cp -r android/capacitor-cordova-android-plugins android-src/
+            rm -rf android
+            mv android-src android
+          fi
+
+      - name: 🔄 Sinkronkan web → Android (npx cap sync)
+        run: npx cap sync android
+
+      - name: 🔐 Siapkan keystore penandatanganan
+        env:
+          KS_B64: ${{ secrets.NATS_KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.NATS_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.NATS_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.NATS_KEY_PASSWORD }}
+        run: |
+          KS="$RUNNER_TEMP/nats-release.jks"
+          if [ -n "$KS_B64" ]; then
+            echo "$KS_B64" | base64 -d > "$KS"
+            echo "NATS_KEYSTORE_PASSWORD=$KS_PASS" >> "$GITHUB_ENV"
+            echo "NATS_KEY_ALIAS=$KEY_ALIAS"       >> "$GITHUB_ENV"
+            echo "NATS_KEY_PASSWORD=$KEY_PASS"     >> "$GITHUB_ENV"
+            echo "Memakai keystore dari Secrets."
+          else
+            echo "::warning::Secrets keystore belum diisi — memakai keystore sementara."
+            keytool -genkeypair -v -keystore "$KS" -alias nats -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass natsbynatan -keypass natsbynatan -dname "CN=NATS BY NATAN, O=Natan, C=ID"
+            echo "NATS_KEYSTORE_PASSWORD=natsbynatan" >> "$GITHUB_ENV"
+            echo "NATS_KEY_ALIAS=nats"                >> "$GITHUB_ENV"
+            echo "NATS_KEY_PASSWORD=natsbynatan"      >> "$GITHUB_ENV"
+          fi
+          echo "NATS_KEYSTORE_FILE=$KS" >> "$GITHUB_ENV"
+
+      - name: 🛠️ Build Gradle
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          TYPE="${{ github.event.inputs.build_type || 'all' }}"
+          case "$TYPE" in
+            debug)   TASKS="assembleDebug" ;;
+            release) TASKS="assembleRelease bundleRelease" ;;
+            *)       TASKS="assembleDebug assembleRelease bundleRelease" ;;
+          esac
+          ./gradlew $TASKS --stacktrace --no-daemon
+
+      - name: 📁 Kumpulkan hasil build
+        run: |
+          mkdir -p dist
+          find android/app/build/outputs -name "*.apk" -o -name "*.aab" | sort
+          cp android/app/build/outputs/apk/debug/app-debug.apk         dist/${APP_NAME}-debug.apk     2>/dev/null || true
+          cp android/app/build/outputs/apk/release/app-release.apk     dist/${APP_NAME}-release.apk   2>/dev/null || true
+          cp android/app/build/outputs/bundle/release/app-release.aab  dist/${APP_NAME}-release.aab   2>/dev/null || true
+          ls -lh dist
+
+      - name: 🗜️ Buat full master backup ZIP (kode sumber)
+        run: |
+          git archive --format=zip --prefix=NATS-BY-NATAN/ -o dist/${APP_NAME}-master-backup.zip HEAD
+          ls -lh dist
+
+      - name: ⬆️ Unggah artefak APK/AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}-android-${{ github.run_number }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: 🚀 Rilis GitHub (tag v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: NATS BY NATAN ${{ github.ref_name }}
+          files: dist/*
+          generate_release_notes: true

@@ -1,0 +1,26 @@
+// NATS BY NATAN — build.gradle tingkat proyek (Capacitor 7 · AGP 8.7 · JDK 21)
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.2'
+        classpath 'com.google.gms:google-services:4.4.2'
+        // CATATAN: jangan menaruh dependensi aplikasi di sini; letakkan di app/build.gradle
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}
