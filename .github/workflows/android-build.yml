@@ -67,8 +67,6 @@ jobs:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
 
-      - name: 🤖 Siapkan Android SDK
-        uses: android-actions/setup-android@v3
 
       - name: 🐘 Siapkan Gradle (cache)
         uses: gradle/actions/setup-gradle@v4
