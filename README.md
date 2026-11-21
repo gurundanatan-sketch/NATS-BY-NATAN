@@ -19,12 +19,17 @@ Aplikasi **Android** untuk belajar kitab suci dari bahasa aslinya. NATS BY NATAN
 - Audio murottal per ayat & satu surah (5 qari) · suara TTS untuk terjemahan
 - Pengaturan tampilan: tema Malam/Terang/Sepia/Hitam (AMOLED), ukuran teks asli & terjemahan, tampilkan/sembunyikan tiap lapisan
 
-**Ensiklopedia Hadits 9 Imam**
+**Tampilan Alkitab (v1.1)**
+- Bilah atas: **nama kitab di tengah** → ketuk untuk memilih Kitab → Pasal → Ayat; **tombol terjemahan** di sebelahnya untuk mencentang banyak terjemahan sekaligus; **ikon cari** di kanan untuk menelusuri referensi (`Yoh 3:16`, `Mzm 23`) atau kata kunci di semua terjemahan, teks asli, glosa, dan nomor Strong
+
+**Ensiklopedia Hadits 9 Imam** — sumber teks: [Hadith API GadingDev](https://api.hadith.gading.dev) (tanpa API key), disimpan ke cache offline; kitab bisa diunduh penuh untuk dibaca & dicari tanpa internet
 - Bukhari, Muslim, Abu Dawud, Tirmidzi, Nasa'i, Ibnu Majah, Ahmad, Malik, Darimi (dengan rumus takhrij klasik خ م د ت ن ه حم ط مي)
 - **Cari berdasarkan nomor** (pilih kitab + nomor), **cari berdasarkan tema**, dan cari kata kunci (Arab/terjemah/perawi)
 - Kartu hadits: kitab & bab, derajat, perawi, matan Arab, translit, terjemah, tab Syarah · Faidah · Takhrij · Tema · Catatan, navigasi nomor sebelum/sesudah
 
 **Perpustakaan Digital**
+- **Impor foto dari Galeri** (pilih banyak sekaligus), foto & video, atau **ambil foto dengan kamera** — izin Android 13/14 (READ_MEDIA_IMAGES/VIDEO, akses foto terpilih) diminta otomatis
+- Tetap ringan untuk ribuan item: metadata dipisah dari isi file, thumbnail 320 px, foto dikompres (maks 2048 px), daftar dimuat bertahap, PDF dirender per halaman yang terlihat, mode Kelola untuk hapus/pindah banyak item
 - Simpan PDF, e-book, gambar, dokumen, teks, link website, dan catatan kajian — tersimpan di HP (IndexedDB), terbuka offline
 - Penampil PDF internal (pdf.js) dengan zoom, folder & tag, pencarian, ekspor ke folder *Documents/NATS*
 - Terima **“Bagikan → NATS”** dari Chrome (link) dan aplikasi lain (PDF)

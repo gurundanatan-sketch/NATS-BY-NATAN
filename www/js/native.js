@@ -1,7 +1,13 @@
 /* NATS BY NATAN — jembatan ke fitur native Android via Capacitor (dengan fallback web) */
 (function (g) {
   const cap = () => g.Capacitor;
-  const P = name => (cap() && cap().Plugins && cap().Plugins[name]) || null;
+  const reg = {};
+  const P = name => {
+    const c = cap(); if (!c || !(c.isNativePlatform && c.isNativePlatform())) return null;
+    if (c.Plugins && c.Plugins[name]) return c.Plugins[name];
+    if (c.registerPlugin && c.isPluginAvailable && c.isPluginAvailable(name)) return reg[name] || (reg[name] = c.registerPlugin(name));
+    return null;
+  };
   const isNative = () => !!(cap() && cap().isNativePlatform && cap().isNativePlatform());
 
   const Native = {
@@ -58,12 +64,70 @@
     },
     exitApp() { const App = P('App'); if (App && App.exitApp) App.exitApp(); },
 
+    /** GET JSON lintas-domain: di Android lewat HTTP native (bebas CORS), di browser lewat fetch */
+    async getJSON(url, ms) {
+      const H = P('CapacitorHttp');
+      if (H) {
+        const r = await H.get({ url, headers: { Accept: 'application/json' }, connectTimeout: ms || 15000, readTimeout: ms || 15000 });
+        if (r.status >= 400) throw new Error('HTTP ' + r.status);
+        return typeof r.data === 'string' ? JSON.parse(r.data) : r.data;
+      }
+      const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms || 15000);
+      try { const r = await fetch(url, { signal: ctl.signal }); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.json(); }
+      finally { clearTimeout(t); }
+    },
+
+    /** Izin galeri/foto (Android 13+: READ_MEDIA_IMAGES, 14+: akses foto terpilih) */
+    async requestGalleryPermission() {
+      const Camera = P('Camera');
+      if (!Camera) return 'granted';
+      try {
+        let st = await Camera.checkPermissions();
+        if (st.photos !== 'granted' && st.photos !== 'limited') st = await Camera.requestPermissions({ permissions: ['photos'] });
+        return st.photos;
+      } catch (e) { return 'granted'; }
+    },
+
+    /** Pilih banyak foto dari galeri → array File. Fallback: pemilih file browser. */
+    async pickFromGallery({ limit = 0, video = false } = {}) {
+      const Camera = P('Camera');
+      if (Camera && !video) {
+        const perm = await Native.requestGalleryPermission();
+        if (perm === 'denied') throw new Error('Izin galeri ditolak. Aktifkan di Pengaturan HP ▸ Aplikasi ▸ NATS ▸ Izin ▸ Foto & video.');
+        const res = await Camera.pickImages({ quality: 90, limit });
+        const out = [];
+        for (const ph of res.photos || []) {
+          const blob = await (await fetch(ph.webPath)).blob();
+          out.push(new File([blob], 'foto-' + Date.now() + '-' + out.length + '.' + (ph.format || 'jpg'), { type: blob.type || 'image/' + (ph.format || 'jpeg') }));
+        }
+        return out;
+      }
+      return pickViaInput(video ? 'image/*,video/*' : 'image/*', true);
+    },
+
+    /** Ambil foto langsung dari kamera (mis. memotret catatan/halaman buku) */
+    async takePhoto() {
+      const Camera = P('Camera');
+      if (!Camera) return pickViaInput('image/*', false, 'environment');
+      const ph = await Camera.getPhoto({ quality: 85, resultType: 'uri', source: 'CAMERA', saveToGallery: false });
+      const blob = await (await fetch(ph.webPath)).blob();
+      return [new File([blob], 'kamera-' + Date.now() + '.' + (ph.format || 'jpg'), { type: blob.type || 'image/jpeg' })];
+    },
+
     async keepAwake(on) { try { if (on && navigator.wakeLock) Native._wl = await navigator.wakeLock.request('screen'); else if (Native._wl) Native._wl.release(); } catch (e) {} }
   };
 
   function blobToBase64(blob) {
     return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = rej; r.readAsDataURL(blob); });
   }
+  function pickViaInput(accept, multiple, capture) {
+    return new Promise(res => {
+      const i = document.createElement('input'); i.type = 'file'; i.accept = accept; i.multiple = !!multiple;
+      if (capture) i.setAttribute('capture', capture);
+      i.onchange = () => res(Array.from(i.files || [])); i.click();
+    });
+  }
+  Native.pickViaInput = pickViaInput;
   Native.blobToBase64 = blobToBase64;
   g.Native = Native;
 })(window);

@@ -82,6 +82,8 @@ Mode **Interlinear** mengganti baris teks asli menjadi kotak per kata: `G25 / �
 114 surah dengan pencarian · basmalah otomatis (kecuali At-Taubah & Al-Fatihah) · Arab + Latin + terjemahan (Kemenag, dll.) · kata per kata dengan akar kata & i'rab · kemunculan akar · tafsir ringkas · murottal per ayat/satu surah dengan sorotan ayat aktif, 5 qari · tautan Quran.com, Quranic Corpus, Kemenag.
 
 ### 5.3 Ensiklopedia Hadits 9 Imam
+Sumber teks: **Hadith API GadingDev** (`/books`, `/books/{kitab}?range=a-b` maks 300, `/books/{kitab}/{nomor}`), dipanggil lewat HTTP native Capacitor (bebas CORS) dan disimpan di IndexedDB `hadith` (cache + unduh kitab penuh). Pencarian kata & tema berjalan di cache offline; catatan studi NATS ditempel hanya bila teks Arab cocok.
+
 Kitab: Bukhari, Muslim, Abu Dawud, Tirmidzi, Nasa'i, Ibnu Majah, Ahmad, Malik, Darimi.
 - **Cari nomor:** pilih kitab (dropdown 9 kitab) + nomor → validasi batas jumlah hadits kitab
 - **Cari tema:** chip tema → daftar hadits lintas kitab
@@ -119,6 +121,8 @@ Kunci universal: `B:GEN.1.1` · `Q:1.1` · `H:bukhari:1`.
 | `@capacitor/clipboard` | salin ayat & kata |
 | `@capacitor/filesystem` | ekspor file & backup ke Documents/NATS |
 | `@capacitor/app` | tombol Kembali, keluar aplikasi |
+| `@capacitor/camera` | impor banyak foto dari Galeri, ambil foto, izin foto/media |
+| `CapacitorHttp` (bawaan) | memanggil API hadits GadingDev tanpa batasan CORS |
 | `MainActivity.java` | intent `ACTION_SEND` (text/plain & application/pdf) → event `natsShare` |
 
 ## 8. Build & rilis

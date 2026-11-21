@@ -1,6 +1,6 @@
 {
   "name": "nats-by-natan",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "NATS BY NATAN — aplikasi Android studi Alkitab (Ibrani/Yunani interlinear), Al-Qur'an, Ensiklopedia Hadits 9 Imam, leksikon, perpustakaan digital, dan pencarian terhubung Chrome.",
   "private": true,
   "author": "Natan",
@@ -22,6 +22,7 @@
     "@capacitor/app": "^7.0.0",
     "@capacitor/app-launcher": "^7.0.0",
     "@capacitor/browser": "^7.0.0",
+    "@capacitor/camera": "^7.0.0",
     "@capacitor/clipboard": "^7.0.0",
     "@capacitor/core": "^7.0.0",
     "@capacitor/filesystem": "^7.0.0",
